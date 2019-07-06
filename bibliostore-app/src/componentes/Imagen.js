@@ -1,27 +1,31 @@
 import React from 'react';
 import logo from './../img/logo.svg';
 import reduxLogo from './../img/reduxLogo.svg';
+import fireBaseLogo from './../img/fbLogo.svg';
 
 const Imagen = () => {
     return(
-        <div className="App centro">
-            <div className="centro">
-                <img src={logo} className="App-logo" alt="logo" />
+        <div className="">
+            <div className="cajaPadre">
+                <div className="caja uno">
+                    <img src={logo} className="App-logo" alt="logo" />
+                </div>
+                <div className="caja dos">
+                    <h1 className="tamaño">ReactJS</h1>
+                </div>
             </div>
-            <div className="centro">
-                <h1 className="tamaño subrayado1">ReactJS</h1>
+            <div className="cajaPadre">
+                <div className="caja uno">
+                    <h1 className="tamañoR">Redux</h1>
+                </div>
+                <div className="caja dos">
+                    <img src={reduxLogo} className="App-logo2" alt="reduxLogo" />
+                </div>
             </div>
-            <p className="tamañoR">-</p>
-            <p className="tamaño">-</p>
-            <div className="centro">
-                <h1 className="tamañoR subrayado2">Redux</h1>
-            </div>
-            <div className="centro"></div>
-            <div className="centro"></div>
-            <div className="centro"></div>
-            <div className="centro"></div>
-            <div className="centro">
-                <img src={reduxLogo} className="App-logo2" alt="reduxLogo" />
+            <div className="cajaPadre">
+                <div className="caja uno">
+                    <img src={fireBaseLogo} className="" alt="fireBaseLogo" />
+                </div>
             </div>
         </div>
     );
