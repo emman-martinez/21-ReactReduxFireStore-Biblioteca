@@ -9,19 +9,19 @@ const Imagen = () => {
                 <img src={logo} className="App-logo" alt="logo" />
             </div>
             <div className="centro">
-                <h1 className="tamaño">ReactJS</h1>
+                <h1 className="tamaño subrayado1">ReactJS</h1>
             </div>
             <p className="tamañoR">-</p>
             <p className="tamaño">-</p>
             <div className="centro">
-                <h1 className="tamañoR">Redux</h1>
+                <h1 className="tamañoR subrayado2">Redux</h1>
             </div>
             <div className="centro"></div>
             <div className="centro"></div>
             <div className="centro"></div>
             <div className="centro"></div>
             <div className="centro">
-                <img src={reduxLogo} className="App-logo" alt="logo" />
+                <img src={reduxLogo} className="App-logo2" alt="reduxLogo" />
             </div>
         </div>
     );
