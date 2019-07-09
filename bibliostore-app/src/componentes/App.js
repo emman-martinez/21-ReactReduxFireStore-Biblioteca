@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       { /* ***** Componente: Navbar ***** */}
-      <Navbar></Navbar>
+      <Navbar></Navbar> 
         <div className="container">
           <Switch>
             <Route exact path="/suscriptores" component={Suscriptores}></Route>
