@@ -25,7 +25,7 @@ function App() {
             <Switch>
               <Route exact path="/suscriptores" component={Suscriptores}></Route>
               <Route exact path="/suscriptores/nuevo" component={NuevoSuscriptor}></Route>
-              <Route exact path="/suscriptores/:id" component={MostrarSuscriptor}></Route>
+              <Route exact path="/suscriptores/mostrar/:id" component={MostrarSuscriptor}></Route>
               <Route exact path="/suscriptores/editar/:id" component={EditarSuscriptor}></Route>
             </Switch>
           </div>
