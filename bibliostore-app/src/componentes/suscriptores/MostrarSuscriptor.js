@@ -21,10 +21,35 @@ const MostrarSuscriptor = (props) => {
                 </Link>
             </div>
             <div className="col-md-6">
-                <Link to={`/suscriptores/editar/${suscriptor.id}`}>  </Link>
+                <Link to={`/suscriptores/editar/${props.suscriptor.id}`} className="btn btn-primary float-right">
+                    <i className="fas fa-pencil-alt"></i> {''}
+                    Editar Suscriptor
+                </Link>
+            </div>
+            <hr className="mx-5 w-100"/>
+            <div className="col-12">
+                <h2 className="mb-4">
+                    {props.suscriptor.nombre} {props.suscriptor.apellido}
+                </h2>
+                <p>
+                    <span className="font-weight-bold">
+                        Carrera:
+                    </span> {''}
+                    {props.suscriptor.carrera}
+                </p>
+                <p>
+                    <span className="font-weight-bold">
+                        Código:
+                    </span> {''}
+                    {props.suscriptor.codigo}
+                </p>
             </div>
         </div>
     );
+}
+
+MostrarSuscriptor.propTypes = {
+    firestore: PropTypes.object.isRequired
 }
 
 export default compose(
