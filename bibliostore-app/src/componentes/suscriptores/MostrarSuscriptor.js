@@ -20,6 +20,9 @@ const MostrarSuscriptor = (props) => {
                     Volver al Listado
                 </Link>
             </div>
+            <div className="col-md-6">
+                <Link to={`/suscriptores/editar/${suscriptor.id}`}>  </Link>
+            </div>
         </div>
     );
 }
