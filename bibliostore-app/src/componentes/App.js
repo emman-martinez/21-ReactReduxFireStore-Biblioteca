@@ -3,6 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // store
 import store from './../store/store';
 import { Provider } from 'react-redux';
+// Libros
+import EditarLibro from './libros/EditarLibro';
+import Libros from './libros/Libros';
+import MostrarLibro from './libros/MostrarLibro';
+import NuevoLibro from './libros/NuevoLibro';
+import PrestamoLibro from './libros/PrestamoLibro';
 // Suscriptores
 import Suscriptores from './suscriptores/Suscriptores';
 import MostrarSuscriptor from './suscriptores/MostrarSuscriptor';
@@ -23,6 +29,13 @@ function App() {
         <Navbar></Navbar> 
           <div className="container">
             <Switch>
+              { /* ***** Libros ***** */ }
+              <Route exact path="/" component={Libros}></Route>
+              <Route exact path="/libros/mostrar/:id" component={MostrarLibro}></Route>
+              <Route exact path="/libros/nuevo" component={NuevoLibro}></Route>
+              <Route exact path="/libros/editar/:id" component={EditarLibro}></Route>
+              <Route exact path="/libros/prestamo/:id" component={PrestamoLibro}></Route>
+              { /* ***** Suscriptores ***** */ }
               <Route exact path="/suscriptores" component={Suscriptores}></Route>
               <Route exact path="/suscriptores/nuevo" component={NuevoSuscriptor}></Route>
               <Route exact path="/suscriptores/mostrar/:id" component={MostrarSuscriptor}></Route>
