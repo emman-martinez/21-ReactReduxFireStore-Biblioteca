@@ -14,6 +14,16 @@ const Libros = (props) => {
     /* Validación de Libros */
     if(!libros) return <Spinner></Spinner>;
 
+    // Eliminar Suscriptores
+    const eliminarLibro = (id) => {
+        console.log('Eliminando... ', id);
+        // Eliminar
+        props.firestore.delete({
+            collection: 'libros',
+            doc: id
+        });
+    }
+
     return(
         <div className="row">
             <div className="col-12 mb-4">
@@ -58,6 +68,7 @@ const Libros = (props) => {
                                 <button 
                                         type="button"
                                         className="btn btn-danger btn-block"
+                                        onClick={ () => eliminarLibro(libro.id) }
                                 >
                                     <i className="fas fa-trash-alt"></i> {''}
                                     Eliminar
