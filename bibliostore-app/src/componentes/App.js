@@ -14,6 +14,8 @@ import Suscriptores from './suscriptores/Suscriptores';
 import MostrarSuscriptor from './suscriptores/MostrarSuscriptor';
 import EditarSuscriptor from './suscriptores/EditarSuscriptor';
 import NuevoSuscriptor from './suscriptores/NuevoSuscriptor';
+// Auth
+import Login from './auth/Login';
 // Layout
 import Navbar from './layout/Navbar';
 // Raíz
@@ -40,6 +42,8 @@ function App() {
               <Route exact path="/suscriptores/nuevo" component={NuevoSuscriptor}></Route>
               <Route exact path="/suscriptores/mostrar/:id" component={MostrarSuscriptor}></Route>
               <Route exact path="/suscriptores/editar/:id" component={EditarSuscriptor}></Route>
+              { /* ***** Auth ***** */ }
+              <Route exact path="/login" component={Login}></Route>
             </Switch>
           </div>
         { /* ***** Componente: Imagen ***** */}
