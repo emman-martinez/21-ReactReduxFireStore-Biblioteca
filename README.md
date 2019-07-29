@@ -1,6 +1,13 @@
 # 21-ReactReduxFireStore-Biblioteca
 ReactJS-Redux-FireSore: Aplicación Biblioteca
 
+## Aplicación finalizada
+### Deployment
+'https://emasesosos.github.io/login?redirect=%2F'
+Iniciar Sesión 
+    Email: correo@correo.com
+    Contraseña: ******
+
 ## Dependencias
 
 ### 'react-router-dom'
@@ -8,3 +15,4 @@ ReactJS-Redux-FireSore: Aplicación Biblioteca
 
 ## 'firebase, react-redux@5, react-redux-firebase@2, redux, redux-firestore'
 ' >npm install --save firebase react-redux@5 react-redux-firebase@2 redux redux-firestore '
+
