@@ -16,6 +16,7 @@ import EditarSuscriptor from './suscriptores/EditarSuscriptor';
 import NuevoSuscriptor from './suscriptores/NuevoSuscriptor';
 // Auth
 import Login from './auth/Login';
+import { UserIsAuthenticated, UserIsNotAuthenticated } from './../helpers/auth';
 // Layout
 import Navbar from './layout/Navbar';
 // Raíz
@@ -32,18 +33,18 @@ function App() {
           <div className="container">
             <Switch>
               { /* ***** Libros ***** */ }
-              <Route exact path="/" component={Libros}></Route>
-              <Route exact path="/libros/mostrar/:id" component={MostrarLibro}></Route>
-              <Route exact path="/libros/nuevo" component={NuevoLibro}></Route>
+              <Route exact path="/" component={UserIsAuthenticated(Libros)}></Route>
+              <Route exact path="/libros/mostrar/:id" component={UserIsAuthenticated(MostrarLibro)}></Route>
+              <Route exact path="/libros/nuevo" component={UserIsAuthenticated(NuevoLibro)}></Route>
               <Route exact path="/libros/editar/:id" component={EditarLibro}></Route>
-              <Route exact path="/libros/prestamo/:id" component={PrestamoLibro}></Route>
+              <Route exact path="/libros/prestamo/:id" component={UserIsAuthenticated(PrestamoLibro)}></Route>
               { /* ***** Suscriptores ***** */ }
-              <Route exact path="/suscriptores" component={Suscriptores}></Route>
-              <Route exact path="/suscriptores/nuevo" component={NuevoSuscriptor}></Route>
-              <Route exact path="/suscriptores/mostrar/:id" component={MostrarSuscriptor}></Route>
-              <Route exact path="/suscriptores/editar/:id" component={EditarSuscriptor}></Route>
+              <Route exact path="/suscriptores" component={UserIsAuthenticated(Suscriptores)}></Route>
+              <Route exact path="/suscriptores/nuevo" component={UserIsAuthenticated(NuevoSuscriptor)}></Route>
+              <Route exact path="/suscriptores/mostrar/:id" component={UserIsAuthenticated(MostrarSuscriptor)}></Route>
+              <Route exact path="/suscriptores/editar/:id" component={UserIsAuthenticated(EditarSuscriptor)}></Route>
               { /* ***** Auth ***** */ }
-              <Route exact path="/login" component={Login}></Route>
+              <Route exact path="/login" component={UserIsNotAuthenticated(Login)}></Route>
             </Switch>
           </div>
         { /* ***** Componente: Imagen ***** */}
