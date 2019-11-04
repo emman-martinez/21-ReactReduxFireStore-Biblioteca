@@ -46,8 +46,8 @@ const initialState = {};
 
 // Create el store
 const store = createStoreWithFirebase(rootReducer, initialState, compose(
-    reactReduxFirebase(firebase),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    reactReduxFirebase(firebase), 
+    //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()    
 ));
-
-export default store;
+  
+export default store;    
